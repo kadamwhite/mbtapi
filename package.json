@@ -1,0 +1,11 @@
+{
+  "name": "mbtapi",
+  "version": "0.2.0",
+  "description": "A wrapper interface for requesting data from the MBTA Realtime API v2",
+  "main": "api.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "K.Adam White <adam@kadamwhite.com> (http://www.kadamwhite.com/)",
+  "license": "MIT"
+}
