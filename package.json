@@ -6,6 +6,19 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kadamwhite/mbtapi.git"
+  },
   "author": "K.Adam White <adam@kadamwhite.com> (http://www.kadamwhite.com/)",
-  "license": "MIT"
+  "homepage": "https://github.com/kadamwhite/mbtapi",
+  "bugs": {
+    "url": "https://github.com/kadamwhite/mbtapi/issues"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "bluebird": "^2.9.27",
+    "lodash": "^3.9.3",
+    "restler": "^3.2.2"
+  }
 }
