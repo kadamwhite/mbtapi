@@ -6,7 +6,7 @@ A Node.js library for interacting with the Massachusetts Bay Transit Authority's
 
 -------------
 
-Quick Links: [Installation](https://github.com/kadamwhite/mbtapi#installation) &bull; [Usage](https://github.com/kadamwhite/mbtapi#usage) &bull; [Available Methods](https://github.com/kadamwhite/mbtapi#available-api-requests) &bull; [Resources](https://github.com/kadamwhite/mbtapi#api-resources)
+Quick Links: [Installation](https://github.com/kadamwhite/mbtapi#installation) &bull; [Usage](https://github.com/kadamwhite/mbtapi#usage) &bull; [Available Methods](https://github.com/kadamwhite/mbtapi#available-api-requests) &bull; [Resources](https://github.com/kadamwhite/mbtapi#api-resources) &bull; [License & Credits](https://github.com/kadamwhite/mbtapi#license--credits)
 
 -------------
 
@@ -138,3 +138,11 @@ mbtapi.serverTime()
 For more information about the MBTA Realtime v2 API, see the [MBTA Realtime developer portal](http://realtime.mbta.com/portal)
 
 In order to use the API, you need to [register for an API key](http://realtime.mbta.com/Portal/Account/Register). Also check out the [Realtime API v2 documentation](http://realtime.mbta.com/Portal/Home/Documents), which has in-depth information about each API endpoint's parameters and response.
+
+## License & Credits
+
+This library's code &copy; 2015 K. Adam White, released under the [MIT License](LICENSE)
+
+Use of the MBTA API is subject to the [Mass DoT Developers License Agreement](http://www.massdot.state.ma.us/Portals/0/docs/developers/develop_license_agree.pdf)
+
+Contributions to the library are welcome: please open an issue if you encounter any issues!
