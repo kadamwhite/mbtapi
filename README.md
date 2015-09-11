@@ -1,5 +1,7 @@
 # MBTAPI
 
+[![Build Status](https://travis-ci.org/kadamwhite/mbtapi.svg)](https://travis-ci.org/kadamwhite/mbtapi)
+
 A Node.js library for interacting with the Massachusetts Bay Transit Authority's MBTA-Realtime v2 API
 
 *Note: This library is neither maintained by nor affiliated with the MBTA*
