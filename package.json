@@ -4,7 +4,7 @@
   "description": "A wrapper interface for requesting data from the MBTA Realtime API v2",
   "main": "api.js",
   "scripts": {
-    "ci": "npm test -- --reporter=list",
+    "ci": "npm run lint && mocha ./tests/specs/*.js ./tests/specs/**/*.js --reporter=list",
     "lint": "grunt lint",
     "test": "mocha ./tests/specs/*.js ./tests/specs/**/*.js --reporter=nyan",
     "pretest": "npm run lint"
