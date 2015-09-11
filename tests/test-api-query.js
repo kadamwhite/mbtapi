@@ -6,6 +6,6 @@ var mbtapi = require( '../api' ).create({
 });
 
 // mbtapi.scheduleByRoute( '88' ).then(function)
-mbtapi.routes().then(function(results) {
-  console.log(results);
+mbtapi.routes().then(function( results ) {
+  console.log( results );
 });

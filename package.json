@@ -4,7 +4,10 @@
   "description": "A wrapper interface for requesting data from the MBTA Realtime API v2",
   "main": "api.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "ci": "npm test -- --reporter=list",
+    "lint": "grunt lint",
+    "test": "mocha ./tests/specs/*.js ./tests/specs/**/*.js --reporter=nyan",
+    "pretest": "npm run lint"
   },
   "repository": {
     "type": "git",
@@ -20,5 +23,19 @@
     "bluebird": "^2.9.27",
     "lodash": "^3.9.3",
     "restler": "^3.2.2"
+  },
+  "devDependencies": {
+    "chai": "^3.2.0",
+    "chai-as-promised": "^5.1.0",
+    "grunt": "^0.4.5",
+    "grunt-cli": "^0.1.13",
+    "grunt-contrib-jshint": "^0.11.3",
+    "grunt-jscs": "^2.1.0",
+    "jscs-stylish": "^0.3.1",
+    "jshint-stylish": "^2.0.1",
+    "mocha": "^2.3.2",
+    "proxyquire": "^1.7.2",
+    "sinon": "^1.16.1",
+    "sinon-chai": "^2.8.0"
   }
 }
