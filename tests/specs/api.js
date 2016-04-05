@@ -339,6 +339,116 @@ describe( 'mbtapi', function() {
 
     });
 
+    describe( '.alertsByStop', function() {
+
+      it( 'is a function', function() {
+        expect( mbtapiClient ).to.have.property( 'alertsByStop' );
+        expect( mbtapiClient.alertsByStop ).to.be.a( 'function' );
+      });
+
+      it( 'creates a request against the alertsByStop endpoint', function() {
+        mbtapiClient.alertsByStop( 'stopId' );
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/alertsbystop?stop=stopId&api_key=apikey&format=json' );
+      });
+
+      it( 'requires the "stop" parameter to be specified', function() {
+        expect( mbtapiClient.alertsByStop() ).to.be
+          .rejectedWith( 'missing required parameter: stop' );
+      });
+
+    });
+
+    describe( '.alertHeaders', function() {
+
+      it( 'is a function', function() {
+        expect( mbtapiClient ).to.have.property( 'alertHeaders' );
+        expect( mbtapiClient.alertHeaders ).to.be.a( 'function' );
+      });
+
+      it( 'creates a request against the alertHeaders endpoint', function() {
+        mbtapiClient.alertHeaders();
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/alertheaders?api_key=apikey&format=json' );
+      });
+
+    });
+
+    describe( '.alertHeadersByRoute', function() {
+
+      it( 'is a function', function() {
+        expect( mbtapiClient ).to.have.property( 'alertHeadersByRoute' );
+        expect( mbtapiClient.alertHeadersByRoute ).to.be.a( 'function' );
+      });
+
+      it( 'creates a request against the alertHeadersByRoute endpoint', function() {
+        mbtapiClient.alertHeadersByRoute( 'routeId' );
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/alertheadersbyroute?route=routeId&api_key=apikey&format=json' );
+      });
+
+      it( 'requires the "route" parameter to be specified', function() {
+        expect( mbtapiClient.alertHeadersByRoute() ).to.be
+          .rejectedWith( 'missing required parameter: route' );
+      });
+
+    });
+
+    describe( '.alertHeadersByStop', function() {
+
+      it( 'is a function', function() {
+        expect( mbtapiClient ).to.have.property( 'alertHeadersByStop' );
+        expect( mbtapiClient.alertHeadersByStop ).to.be.a( 'function' );
+      });
+
+      it( 'creates a request against the alertHeadersByStop endpoint', function() {
+        mbtapiClient.alertHeadersByStop( 'stopId' );
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/alertheadersbystop?stop=stopId&api_key=apikey&format=json' );
+      });
+
+      it( 'requires the "stop" parameter to be specified', function() {
+        expect( mbtapiClient.alertHeadersByStop() ).to.be
+          .rejectedWith( 'missing required parameter: stop' );
+      });
+
+    });
+
+    describe( '.alertById', function() {
+
+      it( 'is a function', function() {
+        expect( mbtapiClient ).to.have.property( 'alertById' );
+        expect( mbtapiClient.alertById ).to.be.a( 'function' );
+      });
+
+      it( 'creates a request against the alertById endpoint', function() {
+        mbtapiClient.alertById( 87 );
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/alertbyid?id=87&api_key=apikey&format=json' );
+      });
+
+      it( 'requires the "id" parameter to be specified', function() {
+        expect( mbtapiClient.alertById() ).to.be
+          .rejectedWith( 'missing required parameter: id' );
+      });
+
+    });
+
+    describe( '.serverTime', function() {
+
+      it( 'is a function', function() {
+        expect( mbtapiClient ).to.have.property( 'serverTime' );
+        expect( mbtapiClient.serverTime ).to.be.a( 'function' );
+      });
+
+      it( 'creates a request against the serverTime endpoint', function() {
+        mbtapiClient.serverTime();
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/servertime?api_key=apikey&format=json' );
+      });
+
+    });
+
   });
 
 });
