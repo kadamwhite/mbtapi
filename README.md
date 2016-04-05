@@ -124,15 +124,36 @@ mbtapi.alerts().then(function( alerts ) {
 mbtapi.alertsByRoute( '90' ).then(function( alerts ) {
   // ...
 });
-```
-The following API methods are not yet available through this library, but should be soon:
-```
-mbtapi.alertsByStop()
-mbtapi.alertById()
-mbtapi.alertHeaders()
-mbtapi.alertHeadersByRoute()
-mbtapi.alertHeadersByStop()
-mbtapi.serverTime()
+
+// Returns a list of all alerts for a stop, with all details
+mbtapi.alertsByStop( 'place-portr' ).then(function( alerts ) {
+  // ...
+});
+
+// Returns the full alert object for a given alert ID
+mbtapi.alertById( 2579 ).then(function( alert ) {
+  // ...
+});
+
+// Returns a list of all alert headers, with all details
+mbtapi.alertHeaders().then(function( alerts ) {
+  // ...
+});
+
+// Returns a list of all alert headers for a route, with all details
+mbtapi.alertHeadersByRoute( '90' ).then(function( alerts ) {
+  // ...
+});
+
+// Returns a list of all alert headers for a stop, with all details
+mbtapi.alertHeadersByStop( 'place-portr' ).then(function( alerts ) {
+  // ...
+});
+
+// Returns the current server time on the MBTA API server
+mbtapi.serverTime().then(function( serverTime ) {
+  console.log( serverTime.server_dt ); // e.g. "1459895929"
+});
 ```
 
 ## API Resources
@@ -147,4 +168,4 @@ This library's code &copy; 2015 K. Adam White, released under the [MIT License](
 
 Use of the MBTA API is subject to the [Mass DoT Developers License Agreement](http://www.massdot.state.ma.us/Portals/0/docs/developers/develop_license_agree.pdf)
 
-Contributions to the library are welcome: please open an issue if you encounter any issues!
+Contributions to the library are welcome: please open an issue if you encounter any problems!
