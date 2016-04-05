@@ -1,6 +1,6 @@
 {
   "name": "mbtapi",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "description": "A wrapper interface for requesting data from the MBTA Realtime API v2",
   "main": "api.js",
   "scripts": {
