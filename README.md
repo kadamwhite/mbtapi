@@ -83,6 +83,11 @@ mbtapi.scheduleByRoute( 'CR-Providence' ).then(function( schedule ) {
   // ...
 });
 
+// Returns scheduled arrivals and departures for a number of routes
+mbtapi.scheduleByRoutes([ 'Red', 'Orange', '88', '90' ]).then(function( schedules ) {
+  // ...
+});
+
 // Returns scheduled arrivals and departures for a particular trip
 mbtapi.scheduleByTrip( '25385462' ).then(function( schedule ) {
   // ...
@@ -100,6 +105,14 @@ mbtapi.predictionsByRoute( 'Green-D' ).then(function( predictions ) {
   // ...
 });
 
+// Returns arrival/departure predictions, plus vehicle locations and alert
+// headers, for a number of routes
+mbtapi.predictionsByRoutes([
+  'Green-B', 'Green-C', 'Green-D', 'Green-E'
+]).then(function( predictions ) {
+  // ...
+});
+
 // Returns arrival/departure predictions, plus vehicle location, for a trip
 mbtapi.predictionsByTrip( '28192827' ).then(function( predictions ) {
   // ...
@@ -107,6 +120,13 @@ mbtapi.predictionsByTrip( '28192827' ).then(function( predictions ) {
 
 // Returns vehicle locations for a route
 mbtapi.vehiclesByRoute( 'Red' ).then(function( vehicles ) {
+  // ...
+});
+
+// Returns vehicle locations for a number of routes
+mbtapi.vehiclesByRoutes([
+  'Green-B', 'Green-C', 'Green-D', 'Green-E'
+]).then(function( vehicles ) {
   // ...
 });
 

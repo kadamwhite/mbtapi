@@ -184,6 +184,33 @@ describe( 'mbtapi', function() {
 
     });
 
+    describe( '.scheduleByRoutes', function() {
+
+      it( 'is a function', function() {
+        expect( mbtapiClient ).to.have.property( 'scheduleByRoutes' );
+        expect( mbtapiClient.scheduleByRoutes ).to.be.a( 'function' );
+      });
+
+      it( 'creates a request against the scheduleByRoutes endpoint', function() {
+        mbtapiClient.scheduleByRoutes( 'Red' );
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/schedulebyroutes?routes=Red&api_key=apikey&format=json' );
+      });
+
+      it( 'can encode an array of routes into a single query argument', function() {
+        mbtapiClient.scheduleByRoutes( [ 'Green-B', 'Green-C', 'Green-D', 'Green-E' ] );
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/schedulebyroutes?routes=Green-B%2CGreen-C%2CGreen-D' +
+            '%2CGreen-E&api_key=apikey&format=json' );
+      });
+
+      it( 'requires the "routes" parameter to be specified', function() {
+        expect( mbtapiClient.scheduleByRoutes() ).to.be
+          .rejectedWith( 'missing required parameter: routes' );
+      });
+
+    });
+
     describe( '.scheduleByTrip', function() {
 
       it( 'is a function', function() {
@@ -244,6 +271,33 @@ describe( 'mbtapi', function() {
 
     });
 
+    describe( '.predictionsByRoutes', function() {
+
+      it( 'is a function', function() {
+        expect( mbtapiClient ).to.have.property( 'predictionsByRoutes' );
+        expect( mbtapiClient.predictionsByRoutes ).to.be.a( 'function' );
+      });
+
+      it( 'creates a request against the predictionsbyroutes endpoint', function() {
+        mbtapiClient.predictionsByRoutes( 'Red' );
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/predictionsbyroutes?routes=Red&api_key=apikey&format=json' );
+      });
+
+      it( 'can encode an array of routes into a single query argument', function() {
+        mbtapiClient.predictionsByRoutes( [ 'Green-B', 'Green-C', 'Green-D', 'Green-E' ] );
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/predictionsbyroutes?routes=Green-B%2CGreen-C%2CGreen-D' +
+            '%2CGreen-E&api_key=apikey&format=json' );
+      });
+
+      it( 'requires the "routes" parameter to be specified', function() {
+        expect( mbtapiClient.predictionsByRoutes() ).to.be
+          .rejectedWith( 'missing required parameter: routes' );
+      });
+
+    });
+
     describe( '.predictionsByTrip', function() {
 
       it( 'is a function', function() {
@@ -280,6 +334,33 @@ describe( 'mbtapi', function() {
       it( 'requires the "route" parameter to be specified', function() {
         expect( mbtapiClient.vehiclesByRoute() ).to.be
           .rejectedWith( 'missing required parameter: route' );
+      });
+
+    });
+
+    describe( '.vehiclesByRoutes', function() {
+
+      it( 'is a function', function() {
+        expect( mbtapiClient ).to.have.property( 'vehiclesByRoutes' );
+        expect( mbtapiClient.vehiclesByRoutes ).to.be.a( 'function' );
+      });
+
+      it( 'creates a request against the vehiclesbyroutes endpoint', function() {
+        mbtapiClient.vehiclesByRoutes( 'Red' );
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/vehiclesbyroutes?routes=Red&api_key=apikey&format=json' );
+      });
+
+      it( 'can encode an array of routes into a single query argument', function() {
+        mbtapiClient.vehiclesByRoutes( [ 'Green-B', 'Green-C', 'Green-D', 'Green-E' ] );
+        expect( restler.get ).to.have.been
+          .calledWith( 'apiroot/v2/vehiclesbyroutes?routes=Green-B%2CGreen-C%2CGreen-D' +
+            '%2CGreen-E&api_key=apikey&format=json' );
+      });
+
+      it( 'requires the "routes" parameter to be specified', function() {
+        expect( mbtapiClient.vehiclesByRoutes() ).to.be
+          .rejectedWith( 'missing required parameter: routes' );
       });
 
     });

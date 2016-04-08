@@ -6,7 +6,8 @@
   "scripts": {
     "ci": "npm run lint && mocha ./tests/specs/*.js ./tests/specs/**/*.js --reporter=list",
     "lint": "grunt lint",
-    "test": "mocha ./tests/specs/*.js ./tests/specs/**/*.js --reporter=nyan",
+    "mocha": "mocha ./tests/specs/*.js ./tests/specs/**/*.js --reporter=nyan",
+    "test": "npm run mocha",
     "pretest": "npm run lint"
   },
   "repository": {
